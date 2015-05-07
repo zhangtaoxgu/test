@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4FF3436-BBE2-4009-A14A-09266B3B620A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>T4Project</RootNamespace>
+    <AssemblyName>T4Project</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatchGenerateTextTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BatchGenerateTextTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BatchGenerateTextTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BatchGenerateTextTemplate.cs</LastGenOutput>
+      <LastOutputs>
+.\Entity\sysdiagrams.cs
+.\Entity\T_Enterprise_Basic.cs
+.\Entity\T_Enterprise_CertificatePhoto.cs
+.\Entity\T_Enterprise_Product.cs
+.\Entity\T_Enterprise_ProductPhoto.cs
+.\Entity\T_Enterprise_StylePhoto.cs
+.\Entity\T_MI_BRIEF_REPORT.cs
+.\Entity\T_MI_GREAT_REPORT.cs
+.\Entity\T_MI_MAJOR_INFO.cs
+.\Entity\T_MI_SERVER_TENDAYS.cs
+.\Entity\T_MI_SERVER_WEEK.cs
+.\Entity\T_MI_SPECIAL_SERVER.cs
+.\Entity\T_MI_SPECIAL_SERVICEINFO.cs
+.\Entity\T_MI_THREERURAL_WEEKLY.cs
+.\Entity\T_NG_AGRICULTURE_INSURANCE.cs
+.\Entity\T_NG_COLL_CONSTRUCTION_OWNERSHIP.cs
+.\Entity\T_NG_COLL_ECONOMIC_EQUITY.cs
+.\Entity\T_NG_COLL_LAND_OWNERSHIP.cs
+.\Entity\T_NG_COLL_SURFACE_OWNERSHIP.cs
+.\Entity\T_NG_COOPERATIVE_MEDICAL.cs
+.\Entity\T_NG_ENDOWMENT_INSURANCE.cs
+.\Entity\T_NG_FACILITY_ENERGY.cs
+.\Entity\T_NG_FACILITY_FISHING_BOAT.cs
+.\Entity\T_NG_FACILITY_FIXED_PUMPSTATION.cs
+.\Entity\T_NG_FACILITY_IRRIGATION_DITCH.cs
+.\Entity\T_NG_FACILITY_POND.cs
+.\Entity\T_NG_FACILITY_SHED.cs
+.\Entity\T_NG_FOREST_USE_OWNERSHIP.cs
+.\Entity\T_NG_HOMESTEAD_OWNERSHIP.cs
+.\Entity\T_NG_HOUSE_OWNERSHIP.cs
+.\Entity\T_NG_LAND_CONTRACT_MANAGEMENT.cs
+.\Entity\T_NG_LIVESTOCK_OWNERSHIP.cs
+.\Entity\T_NG_PROPERTY_TRADING.cs
+.\Entity\T_SYS_PERMISSION.cs
+.\Entity\T_SYS_ROLE.cs
+.\Entity\T_SYS_ROLEPERMISSION.cs
+.\Entity\T_SYS_SYSTEMNAME.cs
+.\Entity\T_SYS_USER.cs
+.\Entity\T_SYS_USERROLE.cs
+.\Entity\T_ZS_AT_IND_TYPE.cs
+.\Entity\T_ZS_BACK_INPUT.cs
+.\Entity\T_ZS_BUS_INFO_MAGAGEMENT.cs
+.\Entity\T_ZS_EP_REG_MANAGEMENT.cs
+.\Entity\T_ZS_FERT_INFO.cs
+.\Entity\T_ZS_FIELD_INFO.cs
+.\Entity\T_ZS_IND_PROD.cs
+.\Entity\T_ZS_INPUT_FEATURES.cs
+.\Entity\T_ZS_INPUT_PROD_INFO_MANAGEMENT.cs
+.\Entity\T_ZS_INPUT_TYPE.cs
+.\Entity\T_ZS_INSPE_INFO.cs
+.\Entity\T_ZS_INSPE_TYPE.cs
+.\Entity\T_ZS_LLLEGAL_INPUT_INFO_MANAGEMENT.cs
+.\Entity\T_ZS_PEST_INFO.cs
+.\Entity\T_ZS_PLANT_FERT_RECORD.cs
+.\Entity\T_ZS_PLANT_PICK_RECORD.cs
+.\Entity\T_ZS_PLANT_PROD_RECORD.cs
+.\Entity\T_ZS_PLANT_SPARY_PEST_RECORD.cs
+.\Entity\T_ZS_PROD_CODE_INFO.cs
+.\Entity\T_ZS_PROD_PHOTO_DETAILS.cs
+.\Entity\T_ZS_PROD_VIDEO_DETAILS.cs
+.\Entity\T_ZS_STAN_PROD_IMAGE.cs
+.\Entity\T_ZS_TRACE_INFO_PRODUCT.cs
+</LastOutputs>
+    </None>
+    <None Include="DbHelper.ttinclude" />
+    <None Include="EntityTemplate.tt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

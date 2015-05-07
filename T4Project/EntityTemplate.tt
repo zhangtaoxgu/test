@@ -1,0 +1,40 @@
+﻿<#+
+
+    public class EntityTemplate : CSharpTemplate
+    {
+        private string _className;
+        private  List<DbColumn> _dbColumns;
+
+        public EntityTemplate(string className,List<DbColumn> dbColumns)
+        {
+            _className = className;
+            _dbColumns = dbColumns;
+        }
+
+        public override string TransformText()
+        {
+            base.TransformText();
+#>
+using System;
+namespace <#=            DefaultNamespace #>
+{
+	public class <#=            _className #>
+	{
+		<#+            foreach(DbColumn column in _dbColumns){ #>
+private <#=                column.CSharpType#> <#+                if(column.CommonType.IsValueType && column.IsNullable){#>?<#+                }#> _<#=                column.ColumnName#>; 
+        ///<summary>
+        ///<#=                column.Remark #>
+        ///<summary>
+        public <#=                column.CSharpType#> <#+                if(column.CommonType.IsValueType && column.IsNullable){#>?<#+                }#> <#=                column.ColumnName#> 
+        { 
+            get; 
+            set; 
+        }
+		<#+            }#> 
+	}
+}
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>
